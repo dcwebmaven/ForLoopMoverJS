@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>JavaScript Animation</title>
+<style type="text/css">
+body {
+ font:76% normal verdana,arial,tahoma;
+}
+
+h1, h2 {
+ font-size:1em;
+}
+
+#fooObject {
+ position:absolute;
+ width:14em;
+ line-height:3em;
+ background:#99ccff;
+ border:1px solid #003366;
+ white-space:nowrap;
+ padding:0.5em;
+}
+#fooButton
+{
+position:absolute;
+top:50px;
+left:0px;
+}
+</style>
+<script type="text/javascript">
+var foo=null;
+function init() {
+  foo = document.getElementById('fooObject'); 
+  foo.style.left = '0px'; 
+  foo.style.top = '0px';
+}
+window.onload = init;
+
+function doMove() 
+{
+for (var i=0; i<529; i++) 
+{
+foo.style.left = parseInt(foo.style.left)+ 10 + 'px';
+foo.style.top = parseInt(foo.style.top)+ 1 + 'px';
+}
+alert("Done!")
+}
+</script>
+</head>
+<body>
+<div id="fooObject">
+Ashes,ashes,we all fall down!</div>
+<br /><br />
+<div id="fooButton">
+<input type="button" name="btn1" value="Move It" onclick="doMove()"/>
+</div>
+</body>
+</html>
